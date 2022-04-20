@@ -12,6 +12,7 @@ import ltd.newbee.mall.newbeemall.entity.IndexConfig;
 import ltd.newbee.mall.newbeemall.entity.NewBeeMallGoods;
 import ltd.newbee.mall.newbeemall.service.NewBeeMallIndexConfigService;
 import ltd.newbee.mall.newbeemall.vo.NewBeeMallGoodsDetailVO;
+import ltd.newbee.mall.newbeemall.vo.NewBeeMallIndexCategoryVO;
 
 @Service
 public class NewBeeMallIndexConfigServiceImpl implements NewBeeMallIndexConfigService {
@@ -67,6 +68,12 @@ public class NewBeeMallIndexConfigServiceImpl implements NewBeeMallIndexConfigSe
 		
 		return voList;
 		
+	}
+
+	@Override
+	public List<NewBeeMallIndexCategoryVO> getCategoriesForIndex() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
