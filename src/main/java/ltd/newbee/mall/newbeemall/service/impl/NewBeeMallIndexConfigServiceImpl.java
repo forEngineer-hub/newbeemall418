@@ -70,10 +70,4 @@ public class NewBeeMallIndexConfigServiceImpl implements NewBeeMallIndexConfigSe
 		
 	}
 
-	@Override
-	public List<NewBeeMallIndexCategoryVO> getCategoriesForIndex() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }
