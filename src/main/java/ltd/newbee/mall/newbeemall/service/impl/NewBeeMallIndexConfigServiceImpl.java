@@ -30,7 +30,15 @@ public class NewBeeMallIndexConfigServiceImpl implements NewBeeMallIndexConfigSe
 			ids.add(iConf.getGoodsId());
 		}
 		
+		
 		return indexConfigMapper.selectByPrimaryKeys(ids);
+		
+		//#1 entity的list => vo的list
+		
+		//#2 转换名字
+		// HUAWEI Mate 30 4000万超感光徕卡影像 麒麟显卡 16G内存 无线充电
+		// 超过30字符的话，30以后用...来代替,如下
+		//HUAWEI Mate 30 4000万超感光徕卡影像 麒麟...
 	}
 
 }
