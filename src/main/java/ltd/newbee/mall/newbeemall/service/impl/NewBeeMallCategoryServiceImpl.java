@@ -29,7 +29,7 @@ public class NewBeeMallCategoryServiceImpl implements NewBeeMallCategoryService 
 		lev1ParentsList.add(0l);
 
 		List<GoodsCategory> lev1CateList = new ArrayList<GoodsCategory>();
-		lev1CateList = goodsCategoryMapper.selectByLevelAndParentIdsAndNumber(lev1ParentsList, 1, 20);
+		lev1CateList = goodsCategoryMapper.selectByLevelAndParentIdsAndNumber(lev1ParentsList, 1, 100);
 
 		List<Long> cateList1 = new ArrayList<Long>();
 
