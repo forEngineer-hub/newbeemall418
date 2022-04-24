@@ -5,14 +5,14 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class RunRecommendApiHistory {
-	private long goodsId;
+	private long categoryId;
 	
-	public long getGoodsId() {
-		return goodsId;
+	public long getCategoryId() {
+		return categoryId;
 	}
 
-	public void setGoodsId(long goodsId) {
-		this.goodsId = goodsId;
+	public void setCategoryId(long categoryId) {
+		this.categoryId = categoryId;
 	}
 
 	public Date getRunDate() {
