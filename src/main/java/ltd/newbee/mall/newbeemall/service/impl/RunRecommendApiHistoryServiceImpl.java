@@ -20,10 +20,12 @@ public class RunRecommendApiHistoryServiceImpl implements RunRecommendApiHistory
 	
 	@Override
 	public int insertRunRecommendApiHistory(List<RunRecommendApiHistory> list) {
-
-		
 		return runRecommendApiHistoryMapper.insertRunRecommendApiHistory(list);
-		
+	}
+
+	@Override
+	public List<Long> selectRecCat(long userId) {
+		return runRecommendApiHistoryMapper.selectRecCat(userId);
 	}
 
 }
