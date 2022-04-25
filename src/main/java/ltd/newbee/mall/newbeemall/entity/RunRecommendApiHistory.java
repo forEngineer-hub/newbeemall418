@@ -6,7 +6,16 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class RunRecommendApiHistory {
 	private long categoryId;
-	
+	private long userId;
+
+	public long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(long userId) {
+		this.userId = userId;
+	}
+
 	public long getCategoryId() {
 		return categoryId;
 	}
@@ -25,6 +34,5 @@ public class RunRecommendApiHistory {
 
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
 	private Date runDate;
-    
-	
+
 }

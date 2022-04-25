@@ -20,22 +20,25 @@ class NewbeeMallApplicationTests {
 
 	@Resource
 	RunRecommendApiHistoryService runRecommendApiHistoryService;
-	
-	/*
-	 * @Test void contextLoads() { List<RunRecommendApiHistory> list = new
-	 * ArrayList<RunRecommendApiHistory>(); RunRecommendApiHistory h1 = new
-	 * RunRecommendApiHistory(); h1.setCategoryId(0); h1.setRunDate(new Date());
-	 * list.add(h1); int cnt =
-	 * runRecommendApiHistoryService.insertRunRecommendApiHistory(list);
-	 * assertEquals(1,cnt); }
-	 */
-	
+
+	@Test
+	void contextLoads() {
+		List<RunRecommendApiHistory> list = new ArrayList<RunRecommendApiHistory>();
+		RunRecommendApiHistory h1 = new RunRecommendApiHistory();
+		h1.setCategoryId(0);
+		h1.setRunDate(new Date());
+		list.add(h1);
+		int cnt = runRecommendApiHistoryService.insertRunRecommendApiHistory(list);
+		assertEquals(1, cnt);
+	}
+
 	@Test
 	void testSelectRecCat() {
-		
-		List<Long> list = runRecommendApiHistoryService.selectRecCat(6l);
-		assertEquals(2,list.size());
-		assertTrue(list.contains(51l));
-		assertTrue(list.contains(47l));
+
+		/*
+		 * List<Long> list = runRecommendApiHistoryService.selectRecCat();
+		 * assertEquals(2, list.size()); assertTrue(list.contains(51l));
+		 * assertTrue(list.contains(47l));
+		 */
 	}
 }

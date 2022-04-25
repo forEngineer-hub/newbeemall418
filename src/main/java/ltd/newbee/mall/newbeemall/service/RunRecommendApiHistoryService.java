@@ -7,5 +7,5 @@ import ltd.newbee.mall.newbeemall.entity.RunRecommendApiHistory;
 public interface RunRecommendApiHistoryService {
 	int insertRunRecommendApiHistory(List<RunRecommendApiHistory> list);
 	
-	List<Long> selectRecCat(long userId);
+	List<RunRecommendApiHistory> selectRecCat();
 }

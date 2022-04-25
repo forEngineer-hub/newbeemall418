@@ -24,8 +24,8 @@ public class RunRecommendApiHistoryServiceImpl implements RunRecommendApiHistory
 	}
 
 	@Override
-	public List<Long> selectRecCat(long userId) {
-		return runRecommendApiHistoryMapper.selectRecCat(userId);
+	public List<RunRecommendApiHistory> selectRecCat() {
+		return runRecommendApiHistoryMapper.selectRecCat();
 	}
 
 }
