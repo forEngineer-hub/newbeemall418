@@ -65,6 +65,7 @@ public class IndexController {
 	@GetMapping("/runRecommendApi")
 	@ResponseBody
 	public Result runRecommendApi() {
+		
 		List<RunRecommendApiHistory> list = runRecommendApiHistoryService.selectRecCat();
 		for(RunRecommendApiHistory r : list) {
 			r.setRunDate(new Date());
