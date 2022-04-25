@@ -10,6 +10,7 @@ public class HelloController {
 	@GetMapping("/hello")
     @ResponseBody
     public String hello() {
+		String str = "";
         return "hello,spring boot";
     }
 }
