@@ -11,6 +11,7 @@ import ltd.newbee.mall.newbeemall.dao.GoodsDetailMapper;
 import ltd.newbee.mall.newbeemall.entity.GoodsDetail;
 import ltd.newbee.mall.newbeemall.entity.GoodsImage;
 import ltd.newbee.mall.newbeemall.service.GoodsDetailService;
+import ltd.newbee.mall.newbeemall.util.BeanUtil;
 import ltd.newbee.mall.newbeemall.vo.GoodsDetailVo;
 
 @Service
@@ -25,9 +26,9 @@ public class GoodsDetailServiceImpl implements GoodsDetailService {
 		List<GoodsDetailVo> voList = new ArrayList<GoodsDetailVo>();
 		for(GoodsDetail e: entityList) {
 			GoodsDetailVo vo = new GoodsDetailVo();
-			vo.setColor(e.getColor());
-			vo.setGoodsId(e.getGoodsId());
-			vo.setMaterial(e.getMaterial());
+			
+			BeanUtil.copyProperties(e, vo);
+
 			String size = "";
 			if(e.getSize1()!=null && e.getSize1()!=0) {
 				size = e.getSize1Name() + e.getSize1();
@@ -44,6 +45,7 @@ public class GoodsDetailServiceImpl implements GoodsDetailService {
 			if(e.getSizeUnit()!=null && !e.getSizeUnit().equals("")) {
 				size = size + e.getSizeUnit();
 			}
+			
 			vo.setSize(size);
 			vo.setWarrantyYears(e.getWarranty() + e.getWarrantyUnit());
 			vo.setWrapSize(null);
