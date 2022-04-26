@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import ltd.newbee.mall.newbeemall.dao.GoodsDetailMapper;
 import ltd.newbee.mall.newbeemall.entity.GoodsDetail;
+import ltd.newbee.mall.newbeemall.entity.GoodsImage;
 import ltd.newbee.mall.newbeemall.service.GoodsDetailService;
 import ltd.newbee.mall.newbeemall.vo.GoodsDetailVo;
 
@@ -51,6 +52,45 @@ public class GoodsDetailServiceImpl implements GoodsDetailService {
 			
 		}
 		return voList;
+	}
+
+	@Override
+	public List<ArrayList<GoodsImage>> getGoodsImages(long goodsId) {
+		// TODO Auto-generated method stub
+		List<GoodsImage> list = goodsDetailMapper.getGoodsImages(goodsId);
+		// => list<list<goodsImage>>
+		List<ArrayList<GoodsImage>> rsList = new ArrayList<ArrayList<GoodsImage>>();
+		
+		ArrayList<GoodsImage> tempList = new ArrayList<GoodsImage>();
+		
+		for (int i = 0; i < list.size(); i++) {
+			
+			
+			if( i == 0) {
+				tempList = new ArrayList<GoodsImage>();
+			}
+			
+			tempList.add(list.get(i));
+			
+			//0 ~7
+			// 0 % 8 == 0 ?
+			if((i+1)%8 == 0) {
+				rsList.add(tempList);  //copy?
+				//tempList.clear();
+			}
+			
+			// 2 
+			if( i == (list.size()-1) && (i+1)%8 != 0) {
+				rsList.add(tempList);  //copy?
+				//tempList.clear();
+			}
+			
+			if((i+1)%8 == 0) {
+				tempList = new ArrayList<GoodsImage>();
+			}
+			
+		}
+		return rsList;
 	}
 
 }
