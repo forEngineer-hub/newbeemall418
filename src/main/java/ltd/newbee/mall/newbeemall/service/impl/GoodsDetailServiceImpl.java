@@ -64,12 +64,7 @@ public class GoodsDetailServiceImpl implements GoodsDetailService {
 		ArrayList<GoodsImage> tempList = new ArrayList<GoodsImage>();
 		
 		for (int i = 0; i < list.size(); i++) {
-			
-			
-			if( i == 0) {
-				tempList = new ArrayList<GoodsImage>();
-			}
-			
+					
 			tempList.add(list.get(i));
 			
 			//0 ~7
@@ -77,6 +72,7 @@ public class GoodsDetailServiceImpl implements GoodsDetailService {
 			if((i+1)%8 == 0) {
 				rsList.add(tempList);  //copy?
 				//tempList.clear();
+				tempList = new ArrayList<GoodsImage>();
 			}
 			
 			// 2 
@@ -84,11 +80,7 @@ public class GoodsDetailServiceImpl implements GoodsDetailService {
 				rsList.add(tempList);  //copy?
 				//tempList.clear();
 			}
-			
-			if((i+1)%8 == 0) {
-				tempList = new ArrayList<GoodsImage>();
-			}
-			
+						
 		}
 		return rsList;
 	}
