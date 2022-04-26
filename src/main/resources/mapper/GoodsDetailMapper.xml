@@ -3,7 +3,7 @@
 <mapper namespace="ltd.newbee.mall.newbeemall.dao.UserMapper">
    
     
-    <select id="getGoodsDetail" parameterType="long" resultType="GoodsDetail">
+    <select id="getGoodsDetail" parameterType="long" resultType="ltd.newbee.mall.newbeemall.entity.GoodsDetail">
         SELECT * FROM newbee_mall_db.goods_detail where goods_id = #{goodsId}
     </select>
     

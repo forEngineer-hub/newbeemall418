@@ -1,4 +1,4 @@
-package ltd.newbee.mall.newbeemall.service;
+package ltd.newbee.mall.newbeemall.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import ltd.newbee.mall.newbeemall.dao.GoodsDetailMapper;
 import ltd.newbee.mall.newbeemall.entity.GoodsDetail;
+import ltd.newbee.mall.newbeemall.service.GoodsDetailService;
 import ltd.newbee.mall.newbeemall.vo.GoodsDetailVo;
 
 @Service
