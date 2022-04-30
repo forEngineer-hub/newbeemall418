@@ -6,6 +6,7 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import ltd.newbee.mall.newbeemall.dao.GoodsDetailMapper;
 import ltd.newbee.mall.newbeemall.entity.GoodsDetail;
@@ -30,6 +31,7 @@ public class GoodsDetailServiceImpl implements GoodsDetailService {
 			BeanUtil.copyProperties(e, vo);
 
 			String size = "";
+			
 			if(e.getSize1()!=null && e.getSize1()!=0) {
 				size = e.getSize1Name() + e.getSize1();
 			}

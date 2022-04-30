@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="ltd.newbee.mall.newbeemall.dao.DetailPageMapper">
+
+	<insert id="insertReview" parameterType="map">
+		insert into review
+		(review_id,
+		order_id,
+		nick_name,
+		rating,
+		title,
+		content,
+		review_date)
+		
+		VALUES(
+		#{reviewId},
+		#{orderId},
+		#{nickName},
+		#{rating},
+		#{title},
+		#{content},
+		#{reviewDate}
+		)
+	</insert>
+
+
+</mapper>
