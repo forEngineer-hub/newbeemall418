@@ -24,5 +24,8 @@
 		)
 	</insert>
 
+	<select id="selectMaxReviewId" resultType="long">
+		select max(review_id) from review
+	</select>
 
 </mapper>
