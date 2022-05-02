@@ -1,5 +1,6 @@
 package ltd.newbee.mall.newbeemall.service.impl;
 
+import java.util.Date;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ public class DetailPageServiceImpl implements DetailPageService {
 		//採番
 		long newReviewId = detailPageMapper.selectMaxReviewId() + 1;
 		review.replace("reviewId", newReviewId);
+		review.replace("reviewDate", new Date());
 		return detailPageMapper.insertReview(review);
 	}
 
