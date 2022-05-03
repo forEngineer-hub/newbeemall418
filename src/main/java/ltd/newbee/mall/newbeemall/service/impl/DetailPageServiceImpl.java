@@ -16,7 +16,7 @@ public class DetailPageServiceImpl implements DetailPageService {
 	
 	@Override
 	public int insertReview(Map<String, Object> review) {
-		//採番 MAX IDを取得してプラス１とする
+		//採番 MAX IDを取得してプラス１
 		long newReviewId = detailPageMapper.selectMaxReviewId() + 1;
 		review.replace("reviewId", newReviewId);
 		return detailPageMapper.insertReview(review);
