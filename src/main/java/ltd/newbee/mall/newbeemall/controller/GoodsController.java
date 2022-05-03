@@ -41,7 +41,6 @@ public class GoodsController {
 
 	/**
 	 * restful风格的参数请求
-	 * http://localhost:8080/goods/detail/review/222222
 	 * @param id
 	 */
 	@RequestMapping(value = "/goods/detail/review/{id}", method = RequestMethod.POST)
