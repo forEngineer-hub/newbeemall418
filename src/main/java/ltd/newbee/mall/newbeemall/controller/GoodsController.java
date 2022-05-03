@@ -47,7 +47,6 @@ public class GoodsController {
 	@RequestMapping(value = "/goods/detail/review/{id}", method = RequestMethod.POST)
 	@ResponseBody
 	public Result queryProduct(@PathVariable("id") String id) {
-		// ...业务处理
 		return ResultGenerator.genSuccessResult(id);
 	}
 
